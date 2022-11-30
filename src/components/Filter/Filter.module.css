@@ -1,0 +1,15 @@
+.filter_input {
+  margin-left: 15px;
+  padding: 6px 10px;
+  margin-left: 10px;
+  border-radius: 4px;
+  border: 1px solid #555;
+}
+.filter_input:focus {
+  border: 1px solid #555;
+  background-color: rgb(185, 217, 227);
+}
+.filter_lable {
+  margin-top: 20px;
+  margin-bottom: 30px;
+}

@@ -1,0 +1,40 @@
+.saving_form {
+  margin-bottom: 40px;
+  margin-top: 30px;
+}
+.saving_lable:first-of-type {
+  margin-left: 0px;
+}
+
+.saving_lable {
+  margin-left: 40px;
+  font-size: 20px;
+}
+
+.input {
+  padding: 8px 14px;
+  margin-left: 10px;
+  border-radius: 4px;
+  border: 1px solid #555;
+}
+.input:focus {
+  border: 1px solid #555;
+  background-color: rgb(185, 217, 227);
+}
+.saving_btn {
+  background-color: #04aa6d;
+  border: none;
+  border-radius: 4px;
+  color: #ffffff;
+  padding: 10px 15px;
+  text-decoration: none;
+  margin: 4px 20px;
+  cursor: pointer;
+}
+.saving_btn:hover,
+.saving_btn:focus {
+  background-color: #039560;
+}
+.saving_btn:active {
+  box-shadow: 3px 3px 3px 0px rgba(55, 54, 54, 0.3);
+}

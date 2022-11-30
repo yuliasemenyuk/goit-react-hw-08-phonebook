@@ -1,0 +1,33 @@
+.contacts_list {
+  list-style: none;
+  margin: 0;
+}
+
+.contact_list_item {
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.contact_list_item:last-of-type {
+  margin-bottom: 0;
+}
+
+.contact_item_btn {
+  background-color: #04aa6d;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  padding: 5px 10px;
+  text-decoration: none;
+  margin: 4px 10px;
+  cursor: pointer;
+}
+
+.contact_item_btn:hover,
+.contact_item_btn:focus {
+  background-color: #039560;
+}
+.contact_item_btn:active {
+  box-shadow: 3px 3px 3px 0px rgba(55, 54, 54, 0.3);
+}
