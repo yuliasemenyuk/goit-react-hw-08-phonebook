@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { toast } from "react-toastify";
 import { useDispatch, useSelector } from "react-redux";
-import { getContacts, getIsLoading } from "../../redux/selectors";
-import { addContact } from "../../redux/operations";
+import { getContacts, getIsLoading } from "../../redux/contacts/contactsSelectors";
+import { addContact } from "../../redux/contacts/contactsOperations";
 import style from "./Form.module.css";
 
 

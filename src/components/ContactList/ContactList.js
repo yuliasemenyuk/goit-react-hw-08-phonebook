@@ -1,8 +1,8 @@
 import { useDispatch, useSelector } from "react-redux";
 import { ContactItem } from "../ContactItem/ContactItem";
-import { getIsLoading } from "../../redux/selectors";
-import { deleteContact } from "../../redux/operations";
-import { getFilterValue, getContacts } from "../../redux/selectors";
+import { getIsLoading } from "../../redux/contacts/contactsSelectors";
+import { deleteContact } from "../../redux/contacts/contactsOperations";
+import { getFilterValue, getContacts } from "../../redux/contacts/contactsSelectors";
 import { toast } from "react-toastify";
 import style from "./ContactList.module.css";
 
