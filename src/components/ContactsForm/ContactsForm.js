@@ -3,10 +3,10 @@ import { toast } from "react-toastify";
 import { useDispatch, useSelector } from "react-redux";
 import { getContacts, getIsLoading } from "../../redux/contacts/contactsSelectors";
 import { addContact } from "../../redux/contacts/contactsOperations";
-import style from "./Form.module.css";
+import style from "./ContactsForm.module.css";
 
 
-export const Form = () => {
+export const ContactsForm = () => {
   const dispatch = useDispatch();
 
   const [name, setName] = useState("");

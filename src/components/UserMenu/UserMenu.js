@@ -1,8 +1,8 @@
 import style from "./UserMenu.module.css";
 
-export const userMenu = ({ email }) => (
+export const UserMenu = () => (
     <div>
-        <p>{email}</p>
-        <button>Logout</button>
+        <p>Welcome</p>
+        <button type="button">Logout</button>
     </div>
 );
