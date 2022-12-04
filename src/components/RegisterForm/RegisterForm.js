@@ -7,10 +7,10 @@ import { getIsLoggedIn, getUser, getIsRefreshing } from 'redux/auth/authSelector
 export const RegisterForm = () => {
   const dispatch = useDispatch();
 
-  const ISLOGGEDIN = useSelector(getIsLoggedIn);
-  console.log(ISLOGGEDIN);
-  const ISREFRESHING = useSelector(getIsRefreshing);
-  console.log(ISREFRESHING);
+  // const ISLOGGEDIN = useSelector(getIsLoggedIn);
+  // console.log(ISLOGGEDIN);
+  // const ISREFRESHING = useSelector(getIsRefreshing);
+  // console.log(ISREFRESHING);
   // const USER = useSelector(getUser);
   // console.log(user);
 
