@@ -1,2 +1,0 @@
-"use strict";(self.webpackChunkgoit_react_hw_08_phonebook=self.webpackChunkgoit_react_hw_08_phonebook||[]).push([[561],{230:function(e,t,n){n.r(t);var o=n(184),i={container:{minHeight:"calc(100vh - 50px)",display:"flex",alignItems:"center",justifyContent:"center"},title:{fontWeight:500,fontSize:48,textAlign:"center"}};t.default=function(){return(0,o.jsx)("div",{style:i.container,children:(0,o.jsx)("h1",{style:i.title,children:"Welcome to your personal contact book"})})}}}]);
-//# sourceMappingURL=561.70e2c42f.chunk.js.map
