@@ -10,7 +10,7 @@ import { ContactList } from "../components/ContactList/ContactList";
 import { LineWave as Loader } from  'react-loader-spinner';
 import style from "../components/App.module.css";
 
-export const ContactsView = () => {
+    const ContactsView = () => {
     const dispatch = useDispatch();
     const isLoading = useSelector(getIsLoading);
     const error = useSelector(getError);
@@ -32,5 +32,6 @@ export const ContactsView = () => {
            
         </div>
       )
-    
 };
+
+export default ContactsView;

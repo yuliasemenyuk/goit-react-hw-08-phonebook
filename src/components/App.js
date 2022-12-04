@@ -1,19 +1,20 @@
-import { useEffect } from "react";
+import { lazy, useEffect } from 'react';
 import { useSelector, useDispatch } from "react-redux";
 import { Route, Routes, Navigate } from 'react-router-dom';
 import { getIsLoading, getError } from "redux/contacts/contactsSelectors";
 import { getIsRefreshing } from "redux/auth/authSelectors";
 import { refreshUser } from "redux/auth/authOperations";
-import { ContactsView } from "../views/ContactsView";
-import  HomeView from "../views/HomeView";
-import { LoginView } from "../views/loginView";
-import { RegisterView } from "../views/RegisterView";
+import { PublicRoute } from "./PublicRoute";
+import { PrivateRoute } from "./PrivateRoute";
+import { Layout } from "./Layout/Layout";
 
+const ContactsView = lazy(() => import('../views/ContactsView'));
+const HomeView = lazy(() => import('../views/HomeView'));
+const LoginView = lazy(() => import('../views/loginView'));
+const RegisterView = lazy(() => import('../views/RegisterView'));
 
 export const App = () => {
   const dispatch = useDispatch();
-  const isLoading = useSelector(getIsLoading);
-  const error = useSelector(getError);
   const isRefreshing = useSelector(getIsRefreshing);
 
 
@@ -26,23 +27,33 @@ export const App = () => {
     <b>Refreshing user...</b>
   ) : (
     <Routes>
-        <Route index element={<HomeView />} />
-       
-        <Route
-          path="/register"
-          element={<RegisterView />}
-            />
+        <Route path="/" element={<Layout />}>
 
+        <Route index element={<HomeView />} />
         <Route
           path="/login"
-          element={<LoginView />} />
-        
-
+          element={
+            <PublicRoute redirectTo="/contacts" component={<LoginView />} />
+          }
+        />
+        <Route
+          path="/register"
+          element={
+            <PublicRoute
+              redirectTo="/contacts"
+              component={<RegisterView />} />
+          }
+        />
+       
         <Route
           path="/contacts"
-          element={<ContactsView />} />
+          element={
+            <PrivateRoute redirectTo="/login" component={<ContactsView />} />
+          }
+        />
         
-      
+        </Route>
+        
     </Routes>
   );
 }

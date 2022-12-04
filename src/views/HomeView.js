@@ -12,7 +12,7 @@ const styles = {
     },
   };
   
-  export default function HomeView() {
+  const HomeView = () => {
     return (
       <div style={styles.container}>
         <h1 style={styles.title}>
@@ -20,4 +20,6 @@ const styles = {
         </h1>
       </div>
     );
-  }
+  };
+
+export default HomeView;

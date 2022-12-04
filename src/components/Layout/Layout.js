@@ -12,9 +12,7 @@ export const Layout = () => {
         <Suspense fallback={null}>
           <Outlet />
         </Suspense>
-     
         <ToastContainer autoClose={2000} />
       </>
-        
     );
   };
