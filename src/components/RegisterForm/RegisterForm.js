@@ -1,10 +1,18 @@
 import React, { useState } from 'react';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { register } from 'redux/auth/authOperations';
 import styles from "./RegisterForm.module.css";
+import { getIsLoggedIn, getUser, getIsRefreshing } from 'redux/auth/authSelectors';
 
 export const RegisterForm = () => {
   const dispatch = useDispatch();
+
+  const ISLOGGEDIN = useSelector(getIsLoggedIn);
+  console.log(ISLOGGEDIN);
+  const ISREFRESHING = useSelector(getIsRefreshing);
+  console.log(ISREFRESHING);
+  // const USER = useSelector(getUser);
+  // console.log(user);
 
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
