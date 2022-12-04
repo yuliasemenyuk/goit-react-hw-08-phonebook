@@ -1,13 +1,13 @@
 import { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { Route, Routes } from 'react-router-dom';
+import { Route, Routes, Navigate } from 'react-router-dom';
 import { getIsLoading, getError } from "redux/contacts/contactsSelectors";
 import { getIsRefreshing } from "redux/auth/authSelectors";
 import { refreshUser } from "redux/auth/authOperations";
 import { ContactsView } from "../views/ContactsView";
 import  HomeView from "../views/HomeView";
-import { LoginView } from "views/loginView";
-import { RegisterView } from "views/RegisterView";
+import { LoginView } from "../views/loginView";
+import { RegisterView } from "../views/RegisterView";
 
 
 export const App = () => {
@@ -27,6 +27,7 @@ export const App = () => {
   ) : (
     <Routes>
         <Route index element={<HomeView />} />
+       
         <Route
           path="/register"
           element={<RegisterView />}
