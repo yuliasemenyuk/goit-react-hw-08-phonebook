@@ -6,9 +6,10 @@ import Filter from "../components/Filter/Filter";
 import { ContactsForm } from "../components/ContactsForm/ContactsForm";
 import { ContactList } from "../components/ContactList/ContactList";
 
-
 import { LineWave as Loader } from  'react-loader-spinner';
-import style from "../components/App.module.css";
+import styles from "../components/App.module.css";
+
+
 
     const ContactsView = () => {
     const dispatch = useDispatch();
@@ -20,11 +21,11 @@ import style from "../components/App.module.css";
       }, [dispatch]);
     
       return (
-        <div className={style.container}>
+        <div className={styles.container}>
             
-           <h1 className={style.title}>Phonebook</h1>
+           <h1 className={styles.title}>Phonebook</h1>
            <ContactsForm />
-           <h2 className={style.title}>Contacts</h2>
+           <h2 className={styles.title}>Contacts</h2>
            <Filter />
            {isLoading && !error ? <Loader/> : 
             <ContactList />
