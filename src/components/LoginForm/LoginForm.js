@@ -1,14 +1,12 @@
 import React, { useState } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { logIn } from 'redux/auth/authOperations';
-import { getError } from '../../redux/auth/authSelectors';
-import { toast } from "react-toastify";
 import style from "./LoginForm.module.css";
 
 export const LoginForm = () => {
   const dispatch = useDispatch();
 
-  const error = useSelector(getError);
+
 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -28,19 +26,12 @@ export const LoginForm = () => {
   };
 
   const handleSubmit = event => {
-      event.preventDefault();
-      if (error) {
-        toast.error('Error. Please check the correctness of the data');
-      } else {
-        dispatch(logIn(user));
-        reset();
-      }
+    event.preventDefault();
+      dispatch(logIn(user));
+
+     
   };
 
-    const reset = () => {
-      setEmail("");
-      setPassword("");
-    };
   
 
     return (

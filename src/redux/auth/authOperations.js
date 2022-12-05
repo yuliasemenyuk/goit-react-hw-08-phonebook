@@ -34,6 +34,7 @@ const setAuthHeader = token => {
         return res.data;
       } catch (error) {
         return thunkAPI.rejectWithValue(error.message);
+        
       }
     }
   );

@@ -1,5 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { logIn, logOut, register, refreshUser } from "./authOperations";
+import { toast } from "react-toastify";
 
 const initialState = {
     user: { name: null, email: null},
@@ -28,6 +29,8 @@ const authSlice = createSlice({
       [register.rejected](state, action) {
         state.error = action.payload;
         state.isLoading = false;
+        toast.error(`Check the data and try again.
+         ${action.payload} `)
       },
       [logIn.pending](state) {
         state.error = null;
@@ -41,6 +44,8 @@ const authSlice = createSlice({
       [logIn.rejected](state, action) {
         state.error = action.payload;
         state.isLoading = false;
+        toast.error(`Check the data and try again. 
+        ${action.payload} `)
       },
       [logOut.pending](state) {
         state.error = null;

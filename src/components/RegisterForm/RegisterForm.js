@@ -33,21 +33,10 @@ export const RegisterForm = () => {
   };
 
   const handleSubmit = event => {
-    event.preventDefault();
-    if (error) {
-      toast.error('Error. Please check the correctness of the data');
-    } else {
+      event.preventDefault();
       dispatch(register(user));
-      reset();
-    }
-    
   };
 
-  const reset = () => {
-    setName("");
-    setEmail("");
-    setPassword("");
-  };
 
   return (
     <form onSubmit={handleSubmit} autoComplete="off" className={style.register_form}>
