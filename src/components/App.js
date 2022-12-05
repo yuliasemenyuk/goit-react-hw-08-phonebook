@@ -1,7 +1,6 @@
 import { lazy, useEffect } from 'react';
 import { useSelector, useDispatch } from "react-redux";
-import { Route, Routes, Navigate } from 'react-router-dom';
-import { getIsLoading, getError } from "redux/contacts/contactsSelectors";
+import { Route, Routes } from 'react-router-dom';
 import { getIsRefreshing } from "redux/auth/authSelectors";
 import { refreshUser } from "redux/auth/authOperations";
 import { PublicRoute } from "./PublicRoute";
