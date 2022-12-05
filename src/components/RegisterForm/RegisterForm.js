@@ -57,6 +57,7 @@ export const RegisterForm = () => {
       <label className={style.register_lable}>
         Password
         <input type="password" name="password" value={password} 
+        minLength="7"
         required
         onChange={handlePasswordInputChange} className={style.register_input}/>
       </label>

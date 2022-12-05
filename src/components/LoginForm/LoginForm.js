@@ -50,6 +50,7 @@ export const LoginForm = () => {
           <input type="password" name="password" 
           value={password} 
           required
+          minLength="7"
           onChange={handlePasswordInputChange}
           className={style.login_input}
         />
