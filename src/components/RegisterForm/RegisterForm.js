@@ -1,18 +1,10 @@
 import React, { useState } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { register } from 'redux/auth/authOperations';
-import styles from "./RegisterForm.module.css";
-import { getIsLoggedIn, getUser, getIsRefreshing } from 'redux/auth/authSelectors';
+import style from "./RegisterForm.module.css";
 
 export const RegisterForm = () => {
   const dispatch = useDispatch();
-
-  // const ISLOGGEDIN = useSelector(getIsLoggedIn);
-  // console.log(ISLOGGEDIN);
-  // const ISREFRESHING = useSelector(getIsRefreshing);
-  // console.log(ISREFRESHING);
-  // const USER = useSelector(getUser);
-  // console.log(user);
 
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -49,20 +41,30 @@ export const RegisterForm = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit} autoComplete="off">
-      <label >
+    <form onSubmit={handleSubmit} autoComplete="off" className={style.register_form}>
+      <label className={style.register_lable}>
         Username
-        <input type="text" name="name" value={name} onChange={handleNameInputChange}/>
+        <input type="text" name="name" value={name} 
+        pattern="^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
+        title="Name may contain only letters, apostrophe, dash and spaces. For example Adrian, Jacob Mercer, Charles de Batz de Castelmore d'Artagnan"
+        required
+        onChange={handleNameInputChange} className={style.register_input}/>
       </label>
-      <label>
+      <label className={style.register_lable}>
         Email
-        <input type="email" name="email" value={email} onChange={handleEmailInputChange}/>
+        <input type="email" name="email" value={email} 
+        required
+        onChange={handleEmailInputChange} className={style.register_input}/>
       </label>
-      <label>
+      <label className={style.register_lable}>
         Password
-        <input type="password" name="password" value={password} onChange={handlePasswordInputChange}/>
+        <input type="password" name="password" value={password} 
+        required
+        onChange={handlePasswordInputChange} className={style.register_input}/>
       </label>
-      <button type="submit">Signup</button>
+      <button type="submit" className={style.register_btn}>
+        Signup
+      </button>
     </form>
   );
 };

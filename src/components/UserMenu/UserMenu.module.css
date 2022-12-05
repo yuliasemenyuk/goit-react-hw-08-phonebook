@@ -1,0 +1,27 @@
+.usermenu_container {
+    display: flex;
+    align-items: center;
+}
+.usermenu_text{
+    font-weight: 500;
+    font-size: 16px;
+    color: #027148;
+    margin: 0;
+}
+.logout_btn {
+    background-color: #04aa6d;
+    border: none;
+    border-radius: 4px;
+    color: #ffffff;
+    padding: 10px 15px;
+    text-decoration: none;
+    margin: 0 20px;
+    cursor: pointer;
+}
+.logout_btn:hover,
+.logout_btn:focus {
+    background-color: #039560;
+}
+.logout_btn:active {
+    box-shadow: 3px 3px 3px 0px rgba(55, 54, 54, 0.3);
+}

@@ -11,9 +11,13 @@ export const UserMenu = () => {
   };
 
   return (
-    <div>
-        <p>Welcome {user.name} !</p>
-        <button type="button" onClick={() => handleLogout()}>Logout</button>
+    <div className={style.usermenu_container}>
+        <p className={style.usermenu_text}>Welcome {user.name} !</p>
+        <button type="button"
+        onClick={() => handleLogout()}
+        className={style.logout_btn}>
+          Logout
+        </button>
     </div>
   )
 };

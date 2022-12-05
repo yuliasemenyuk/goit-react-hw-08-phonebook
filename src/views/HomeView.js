@@ -16,7 +16,7 @@ const styles = {
     return (
       <div style={styles.container}>
         <h1 style={styles.title}>
-            Welcome to your personal contact book
+            Welcome to your personal contact book!
         </h1>
       </div>
     );

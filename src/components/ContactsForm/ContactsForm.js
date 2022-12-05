@@ -55,7 +55,7 @@ export const ContactsForm = () => {
       <label className={style.saving_lable}>
         Name{" "}
         <input
-          className={style.input}
+          className={style.saving_input}
           type="text"
           name="name"
           value={name}
@@ -68,7 +68,7 @@ export const ContactsForm = () => {
       <label className={style.saving_lable}>
         Number
         <input
-          className={style.input}
+          className={style.saving_input}
           type="number"
           name="number"
           value={number}

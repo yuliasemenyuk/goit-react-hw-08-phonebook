@@ -11,13 +11,13 @@
   font-size: 20px;
 }
 
-.input {
+.saving_input {
   padding: 8px 14px;
   margin-left: 10px;
   border-radius: 4px;
   border: 1px solid #555;
 }
-.input:focus {
+.saving_input:focus {
   border: 1px solid #555;
   background-color: rgb(185, 217, 227);
 }

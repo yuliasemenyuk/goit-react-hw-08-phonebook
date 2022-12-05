@@ -1,0 +1,26 @@
+.nav_container {
+    display: flex;
+    align-items: center;
+    /* justify-content: space-between; */
+}
+.nav_link {
+    padding: 8px 14px;
+    margin-left: 15px;
+    text-decoration: none;
+    color: #027148;
+    font-weight: 600;
+    font-size: 18px;
+}
+.nav_link:hover,
+.nav_link:focus {
+    color: #014c31;
+    text-decoration: underline;
+}
+.active_nav_link {
+    padding: 8px 14px;
+    margin-left: 15px;
+    text-decoration: none;
+    font-weight: 800;
+    font-size: 18px;
+    color: #027148;
+}

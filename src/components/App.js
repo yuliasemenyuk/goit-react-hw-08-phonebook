@@ -7,6 +7,7 @@ import { refreshUser } from "redux/auth/authOperations";
 import { PublicRoute } from "./PublicRoute";
 import { PrivateRoute } from "./PrivateRoute";
 import { Layout } from "./Layout/Layout";
+import { LineWave as Loader } from 'react-loader-spinner';
 
 const ContactsView = lazy(() => import('../views/ContactsView'));
 const HomeView = lazy(() => import('../views/HomeView'));
@@ -24,7 +25,7 @@ export const App = () => {
 
 
   return isRefreshing ? (
-    <b>Refreshing user...</b>
+   <Loader/>
   ) : (
     <Routes>
         <Route path="/" element={<Layout />}>

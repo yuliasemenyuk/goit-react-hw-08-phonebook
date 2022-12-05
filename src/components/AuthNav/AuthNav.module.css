@@ -1,0 +1,20 @@
+.nav_btn {
+    background-color: #018051;
+    border: none;
+    border-radius: 4px;
+    color: #ffffff;
+    padding: 10px 15px;
+    text-decoration: none;
+    cursor: pointer;
+    font-weight: bold;
+}
+.nav_btn:first-of-type{
+    margin-right: 30px;
+}
+.nav_btn:hover,
+.nav_btn:focus {
+  background-color: #039560;
+}
+.nav_btn:active {
+  box-shadow: 3px 3px 3px 0px rgba(55, 54, 54, 0.3);
+}
