@@ -1,10 +1,14 @@
 import React, { useState } from 'react';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { register } from 'redux/auth/authOperations';
+import { getError } from '../../redux/auth/authSelectors';
+import { toast } from "react-toastify";
 import style from "./RegisterForm.module.css";
 
 export const RegisterForm = () => {
   const dispatch = useDispatch();
+
+  const error = useSelector(getError);
 
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -30,8 +34,13 @@ export const RegisterForm = () => {
 
   const handleSubmit = event => {
     event.preventDefault();
-    dispatch(register(user));
-    reset();
+    if (error) {
+      toast.error('Error. Please check the correctness of the data');
+    } else {
+      dispatch(register(user));
+      reset();
+    }
+    
   };
 
   const reset = () => {

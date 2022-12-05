@@ -11,6 +11,7 @@ const ContactsView = lazy(() => import('../views/ContactsView'));
 const HomeView = lazy(() => import('../views/HomeView'));
 const LoginView = lazy(() => import('../views/loginView'));
 const RegisterView = lazy(() => import('../views/RegisterView'));
+const NotFoundView = lazy(() => import('../views//NotFoundView'));
 
 export const App = () => {
   const dispatch = useDispatch();
@@ -50,6 +51,8 @@ export const App = () => {
             <PrivateRoute redirectTo="/login" component={<ContactsView />} />
           }
         />
+        
+          <Route path="*" element={<NotFoundView />} />
         
         </Route>
         
