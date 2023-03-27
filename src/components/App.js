@@ -59,14 +59,3 @@ export const App = () => {
     </Routes>
   );
 }
-
-    // <div className={style.container}>
-    //     <h1 className={style.title}>Phonebook</h1>
-    //     <ContactsForm />
-    //     <h2 className={style.title}>Contacts</h2>
-    //     <Filter />
-    //     {isLoading && !error ? <Loader/> : 
-    //     <ContactList />
-    //     }
-    //     <ToastContainer autoClose={2000} />
-    // </div>

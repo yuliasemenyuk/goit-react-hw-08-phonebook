@@ -9,8 +9,6 @@ import { ContactList } from "../components/ContactList/ContactList";
 import { LineWave as Loader } from  'react-loader-spinner';
 import styles from "../components/App.module.css";
 
-
-
     const ContactsView = () => {
     const dispatch = useDispatch();
     const isLoading = useSelector(getIsLoading);
@@ -29,8 +27,7 @@ import styles from "../components/App.module.css";
            <Filter />
            {isLoading && !error ? <Loader/> : 
             <ContactList />
-            }
-           
+            }     
         </div>
       )
 };

@@ -5,7 +5,6 @@ const handlePending = state => {
   state.contacts.isLoading = true;
 };
 
-
 const handleRejected = (state, action) => {
   state.contacts.isLoading = false;
   state.contacts.error = action.payload;
@@ -52,9 +51,7 @@ const contactsSlice = createSlice({
   },
 });
 
-
 export const contactsReducer = contactsSlice.reducer;
-
 export const { filterContacts } = contactsSlice.actions;
 
 

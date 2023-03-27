@@ -1,14 +1,10 @@
 import React, { useState } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { register } from 'redux/auth/authOperations';
-import { getError } from '../../redux/auth/authSelectors';
-import { toast } from "react-toastify";
 import style from "./RegisterForm.module.css";
 
 export const RegisterForm = () => {
   const dispatch = useDispatch();
-
-  const error = useSelector(getError);
 
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -36,7 +32,6 @@ export const RegisterForm = () => {
       event.preventDefault();
       dispatch(register(user));
   };
-
 
   return (
     <form onSubmit={handleSubmit} autoComplete="off" className={style.register_form}>

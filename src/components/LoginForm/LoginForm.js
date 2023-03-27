@@ -6,11 +6,8 @@ import style from "./LoginForm.module.css";
 export const LoginForm = () => {
   const dispatch = useDispatch();
 
-
-
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-
 
   const handleEmailInputChange = (evt) => {
     setEmail(evt.target.value);
@@ -31,8 +28,6 @@ export const LoginForm = () => {
 
      
   };
-
-  
 
     return (
         <form onSubmit={handleSubmit} autoComplete="off" className={style.login_form}>
@@ -57,6 +52,5 @@ export const LoginForm = () => {
         </label>
         <button type="submit" onSubmit={handleSubmit} className={style.login_btn}>Login</button>
       </form>
-    );
-        
+    );    
 };
